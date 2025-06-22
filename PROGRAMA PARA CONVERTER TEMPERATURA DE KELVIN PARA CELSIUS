@@ -1,0 +1,27 @@
+//PROGRAMA PARA CONVERTER TEMPERATURA DE KELVIN PARA CELSIUS
+
+//Um professor de ensino médio solicitou aos seus alunos que desenvolvessem um programa para converter
+// o valor do ponto de ebulição da águe de Kelvin para graus celcius.
+// Dica: C = K - 273
+// POnto de Ebulição da agua em Kelvin: 373.2
+// POnto de Ebulição da agua em Celcius: 100
+
+// declarar meu pacote principal
+package main
+
+//importar função fmt
+import "fmt"
+
+//declaração da variável do ponto de ebulição da água em Kelvin
+const ebulicaoK = 373.2
+
+//função principal
+func main() {
+	var tempK = ebulicaoK     //variável do valor da temperatura em graus K
+	var tempC = (tempK - 273) //Conversão de K para C
+	//exibir na tela o resultado
+	fmt.Printf("A temperatura de ebulição da água em °K = %.1f  e a temperatura de ebulição da água em °C = %.0f\n", tempK, tempC)
+
+	// A gente espera que apareça °K = 373.2 e °C = 100
+	// foram adicionados o marcadores °C = %.0f\n para truncar o valor para 100, pois em Kelvin a temperatura é um Float.
+}
